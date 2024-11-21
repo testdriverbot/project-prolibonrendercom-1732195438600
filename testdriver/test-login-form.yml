@@ -1,0 +1,98 @@
+version: 4.1.27
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Fill in the "Username" field with test data.
+    commands:
+      - command: hover-text
+        text: Username
+        description: label for the username input field
+        action: click
+      - command: type
+        text: testuser
+  - prompt: Fill in the "Username" field with test data.
+    commands:
+      - command: hover-text
+        text: Username
+        description: label for the username input field
+        action: click
+      - command: type
+        text: testuser
+  - prompt: Fill in the "Username" field with test data.
+    commands:
+      - command: hover-text
+        text: Username
+        description: label for the username input field
+        action: click
+      - command: type
+        text: testuser
+  - prompt: Fill in the "Username" field with test data.
+    commands:
+      - command: hover-text
+        text: Username
+        description: label for the username input field
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: testuser
+  - prompt: Fill in the "Password" field with test data.
+    commands:
+      - command: hover-text
+        text: Password
+        description: label for the password input field
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: testpassword
+  - prompt: Click the "Login" button.
+    commands:
+      - command: hover-text
+        text: Login
+        description: button to submit login form
+        action: click
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed
+  - prompt: >-
+      Assert that user is redirected to the dashboard or receives a success
+      message.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Invalid credentials message is displayed

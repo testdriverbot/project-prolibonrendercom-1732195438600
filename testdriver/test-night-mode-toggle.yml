@@ -1,0 +1,26 @@
+version: 4.1.27
+steps:
+  - prompt: Locate and click the night mode toggle button.
+    commands:
+      - command: hover-image
+        description: >-
+          moon icon for night mode toggle in the top right corner of the login
+          form
+        action: click
+  - prompt: Assert that the webpage appearance changes to night mode.
+    commands:
+      - command: assert
+        expect: the webpage is in night mode
+  - prompt: Click the toggle button again to switch back.
+    commands:
+      - command: hover-image
+        description: >-
+          sun icon for night mode toggle in the top right corner of the login
+          form
+        action: click
+  - prompt: >-
+      Assert that the webpage returns to the original appearance.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the webpage is in light mode

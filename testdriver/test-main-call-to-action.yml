@@ -1,0 +1,36 @@
+version: 4.1.27
+steps:
+  - prompt: Assert the main call to action "Login" is visible.
+    commands:
+      - command: assert
+        expect: the "Login" button is visible
+  - prompt: Click on the "Login" button.
+    commands:
+      - command: hover-text
+        text: Login
+        description: login button on the form
+        action: click
+  - prompt: >-
+      Assert that the login process initiates without errors.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: the "Please fill out this field" message is visible
+  - prompt: >-
+      Assert that the login process initiates without errors.  # Use the content
+      of the file from the environment
+    commands:
+      - command: type
+        text: testuser
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: testpassword
+      - command: hover-text
+        text: Login
+        description: login button on the form
+        action: click
+      - command: assert
+        expect: the login process initiates without errors
